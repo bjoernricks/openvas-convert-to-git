@@ -1,5 +1,13 @@
 # Scripts to convert OpenVAS SVN repos to git
 
+The available scripts are using git-svn for converting the svn repositories to
+git. This procedure doesn't require file access to the svn server. To install
+git-svn on Debian based systems run
+
+```
+apt-get install git-svn
+```
+
 ## Steps to convert an OpenVAS module to a git repository
 
 ### 1. Create a new config
