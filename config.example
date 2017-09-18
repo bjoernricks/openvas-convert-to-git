@@ -1,0 +1,12 @@
+# example config
+
+# username for svn repo access
+USERNAME=foo
+ # module name e.g. openvas-scanner
+MODULE=openvas-scanner
+ # name may be different from $MODULE
+TAGS_MODULE=$MODULE
+# name may be different from $MODULE
+BRANCH_MODUE=$MODULE
+# path to created git repo e.g /path/to/manager-git
+GIT_REPO_PATH=~/openvas-scanner-git
