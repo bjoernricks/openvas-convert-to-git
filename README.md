@@ -29,7 +29,7 @@ apt-get install git-svn
 ### 2. Run init script
 
   ```
-  $ /path/to/convert-repo/init.sh /path/to/<config file>
+  /path/to/convert-repo/init.sh /path/to/<config file>
   ```
 
 ### 3. Update created authors file
@@ -39,25 +39,14 @@ apt-get install git-svn
   $EDITOR authors-transform-<module name>.txt
   ```
 
-### 4. Convert svn repo by fetching commits
+### 4. Run
 
   ```sh
-  cd <path to created git repo>
-  git svn fetch
+  /path/to/convert-repo/convert.sh /path/to/<config file>
   ```
 
-### 5. Create a .gitignore file from svnignore
+### 5. Finished
 
-  ```sh
-  cd <path to created git repo>
-  git svn show-ignore > .gitignore
-  ```
-
-### 6. Convert tags to git tags
-
-  svn tags are fetched as git branches. Now convert them to real git tags
-
-  ```sh
-  cd <path to created git repo>
-  /path/to/convert-repo/convert-tags.sh
-  ```
+  Afterwards you will get to repos GIT_REPO_PATH and GIT_REPO_PATH.git
+  The GIT_REPO_PATH.git path contains a bare repository that can be used as a
+  master.
