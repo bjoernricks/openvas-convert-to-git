@@ -34,7 +34,7 @@ fi
 cd "$GIT_REPO_PATH"
 
 echo "Fetching svn data"
-git config svn-remote.svn.noMetadata
+git config svn-remote.svn.noMetadata true
 git svn fetch
 
 echo "Converting svn-ignore to .gitignore"
