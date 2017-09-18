@@ -1,9 +1,9 @@
 #!/bin/sh
 
-git for-each-ref --format='%(refname)' refs/remotes/svn/tags |
-cut -d / -f 5 |
+git for-each-ref --format='%(refname)' refs/heads/tags |
+cut -d / -f 4 |
 while read ref
 do
-  git tag "$ref" "refs/remotes/svn/tags/$ref";
-  git branch -r -D "svn/tags/$ref";
+  git tag "$ref" "refs/heads/tags/$ref";
+  git branch -D "tags/$ref";
 done
