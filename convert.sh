@@ -26,6 +26,13 @@ fi
 CONVERT_REPO=$(realpath "$0")
 CONVERT_REPO=$(dirname "$CONVERT_REPO")
 
+if [ ! -d "$GIT_REPO_PATH" ]; then
+    echo "Missing git repo at $GIT_REPO_PATH. Please run $CONVERT_REPO/init.sh."
+    exit 1
+fi
+
+cd "$GIT_REPO_PATH"
+
 echo "Fetching svn data"
 git config svn-remote.svn.noMetadata
 git svn fetch
