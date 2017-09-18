@@ -1,4 +1,7 @@
 #!/bin/sh
+
+set -e
+
 CONFIG=$1
 if [ -z "$CONFIG" ]; then
     echo "Please specifiy a config"
