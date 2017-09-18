@@ -47,15 +47,15 @@ echo "Initalizing git bare repository"
 git init --bare "$GIT_BARE_REPO_PATH"
 cd "$GIT_BARE_REPO_PATH"
 
-git symbolic-ref HEAD refs/heads/trunk
-
 cd "$GIT_REPO_PATH"
 git push bare
+git push bare --tags
+git push bare master
 
 cd "$GIT_BARE_REPO_PATH"
 
 echo "Converting svn tags to git tags"
 $CONVERT_REPO/convert-tags.sh
 
-echo "Renaming trunk to master"
-git branch -m trunk master
+# delete trunk
+git branch -D trunk
