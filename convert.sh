@@ -47,8 +47,6 @@ echo "Initalizing git bare repository"
 git init --bare "$GIT_BARE_REPO_PATH"
 cd "$GIT_BARE_REPO_PATH"
 
-git init --bare .
-
 git symbolic-ref HEAD refs/heads/trunk
 
 cd "$GIT_REPO_PATH"
