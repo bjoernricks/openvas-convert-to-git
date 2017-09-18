@@ -14,13 +14,13 @@ if [ -z "$GIT_REPO_PATH" ]; then
     echo "Config missing GIT_REPO_PATH variable"
     exit 1
 else
-    GIT_REPO_PATH=$(realpath "GIT_REPO_PATH")
+    GIT_REPO_PATH=$(realpath "$GIT_REPO_PATH")
 fi
 
 if [ -z "$GIT_BARE_REPO_PATH" ]; then
     GIT_BARE_REPO_PATH="$GIT_REPO_PATH.git"
-else 
-    GIT_BARE_REPO_PATH=$(realpath "GIT_BARE_REPO_PATH")
+else
+    GIT_BARE_REPO_PATH=$(realpath "$GIT_BARE_REPO_PATH")
 fi
 
 CONVERT_REPO=$(realpath "$0")
