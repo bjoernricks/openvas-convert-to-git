@@ -7,10 +7,10 @@ MODULE=openvas-scanner
  # name may be different from $MODULE
 TAGS_MODULE=$MODULE
 # name may be different from $MODULE
-BRANCH_MODUE=$MODULE
+BRANCHES_MODULE=$MODULE
 # path to created git repo e.g /path/to/manager-git
 GIT_REPO_PATH=~/openvas-scanner-git
 
 # set a authors transform file if already existing
 # if not set a new file will be generated with init.sh
-# TANSFORM_FILE=authors-transform-$MODULE.txt
+# TRANSFORM_FILE=authors-transform-$MODULE.txt

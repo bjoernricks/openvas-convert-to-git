@@ -22,7 +22,7 @@ apt-get install git-svn
   USERNAME=<username for svn repo access>
   MODULE=<module name e.g. openvas-manager>
   TAGS_MODULE=$MODULE # name may be different from $MODULE
-  BRANCH_MODUE=$MODULE # name may be different from $MODULE
+  BRANCHES_MODULE=$MODULE # name may be different from $MODULE
   GIT_REPO_PATH=<path to created git repo> # e.g /path/to/manager-git
   ```
 
