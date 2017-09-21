@@ -37,15 +37,11 @@ echo "Fetching svn data"
 git config svn-remote.svn.noMetadata true
 git svn fetch
 
-echo "Converting svn-ignore to .gitignore"
-$CONVERT_REPO/convert-ignore.sh
-
 git remote add bare "$GIT_BARE_REPO_PATH"
 git config remote.bare.push 'refs/remotes/svn/*:refs/heads/*'
 
 echo "Initalizing git bare repository"
 git init --bare "$GIT_BARE_REPO_PATH"
-cd "$GIT_BARE_REPO_PATH"
 
 cd "$GIT_REPO_PATH"
 git push bare
