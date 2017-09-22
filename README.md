@@ -26,6 +26,8 @@ apt-get install git-svn
   GIT_REPO_PATH=<path to created git repo> # e.g /path/to/manager-git
   ```
 
+  See [Example Config](config.example) for details and options.
+
 ### 2. Run init script
 
   ```
