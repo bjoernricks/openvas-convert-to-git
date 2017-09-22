@@ -73,7 +73,7 @@ apt-get install git-svn
   ```sh
   source <path to config file>
   cd $GIT_REPO_PATH.git
-  /path/to/convert-repo/delete-at.refs.sh
+  /path/to/convert-repo/delete-at-refs.sh
   ```
 
   Also some older branches may use `-` in their version. These branches should
