@@ -34,19 +34,48 @@ apt-get install git-svn
 
 ### 3. Update created authors file
 
+  If you are not already using an existing authors transform file the svn
+  user names should be mapped to real names.
+
   ```sh
   cd <path to created git repo>
   $EDITOR authors-transform-<module name>.txt
   ```
 
-### 4. Run
+### 4. Check and adjust generated git config
+
+  Check the generated settings at the git config for svn tags and branches.
+
+  ```sh
+  cd <path to created git repo>
+  $EDITOR .git/config
+  ```
+
+### 5. Run
 
   ```sh
   /path/to/convert-repo/convert.sh /path/to/<config file>
   ```
 
-### 5. Finished
+### 6. Finished
 
-  Afterwards you will get to repos GIT_REPO_PATH and GIT_REPO_PATH.git
-  The GIT_REPO_PATH.git path contains a bare repository that can be used as a
+  Afterwards you will get to repos `$GIT_REPO_PATH` and `$GIT_REPO_PATH.git`
+  The `$GIT_REPO_PATH.git` path contains a bare repository that can be used as a
   master.
+
+### 7. Optional cleanup
+
+  Sometimes git-svn creates xyz@revsion tags and branches during conversion. You
+  can delete those branches and tags.
+
+  ```sh
+  source <path to config file>
+  cd $GIT_REPO_PATH.git
+  /path/to/convert-repo/delete-at.refs.sh
+  ```
+
+  Also some older branches may use `-` in their version. These branches should
+  be renamed.
+  ```sh
+  git branch -m <name>-<x>-<y> <name>-<x>.<y>
+  ```
