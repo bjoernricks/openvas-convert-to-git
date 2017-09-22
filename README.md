@@ -44,7 +44,9 @@ apt-get install git-svn
 
 ### 4. Check and adjust generated git config
 
-  Check the generated settings at the git config for svn tags and branches.
+  Check the generated settings at the git config for svn tags and branches. It
+  is possible to user wildcards for branches and tags instead to list all. Also
+  you may add several branches and tags variables.
 
   ```sh
   cd <path to created git repo>
