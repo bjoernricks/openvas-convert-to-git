@@ -33,8 +33,11 @@ fi
 
 cd "$GIT_REPO_PATH"
 
+if [  "$METADATA" = "false" ]; then
+    git config svn-remote.svn.noMetadata true
+fi
+
 echo "Fetching svn data"
-git config svn-remote.svn.noMetadata true
 git svn fetch
 
 git remote add bare "$GIT_BARE_REPO_PATH"

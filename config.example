@@ -11,6 +11,9 @@ BRANCHES_MODULE=$MODULE
 # path to created git repo e.g /path/to/manager-git
 GIT_REPO_PATH=~/openvas-scanner-git
 
+# set METADATA to false to strip svn metadata
+# METADATA=true
+
 # set a authors transform file if already existing
 # if not set a new file will be generated with init.sh
 # TRANSFORM_FILE=authors-transform-$MODULE.txt
